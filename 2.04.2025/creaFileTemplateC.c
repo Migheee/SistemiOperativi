@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
         exit(-1);
     }
     else{
-        int fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC, mode); //nicola drago rulez
+        int fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC, mode); //nicola drago rulez. Nota al posto di mode, si poteva fare 0755
         if(fd == -1){
             printf("C'è stato un errore nella creazoine del file\n");
             exit(-1);
