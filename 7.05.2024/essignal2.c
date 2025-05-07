@@ -25,8 +25,7 @@ int main(){
 void signal_manager(int){
     pid_t dead;
     int st;
-    while ((dead = wait(&st)) != -1)
-    {
+    while ((dead = wait(&st)) != -1){
         if (WIFSIGNALED(st))
         printf("figlio con pid %d terminato con segnale = %d \n " ,dead,  WTERMSIG(st));
     }
