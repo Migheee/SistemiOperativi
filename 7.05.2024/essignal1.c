@@ -19,7 +19,6 @@ int main(void) {
             pause(); //se non ci fosse pause(), probabilmente faceva in tempo a fare la exit...
             exit(50);
         } else {
-            while(1);
             while ((fid = wait(&st)) != -1) {
                 if (WIFEXITED(st)) { //usando queste macro si interroga st. negli ultimi 2 byte a dx si vanno a vedere i segnali e l'exit code
                     printf("\nFiglio con pid = %d terminato OK con exit code = %d\n", fid, WEXITSTATUS(st)); //WEXITSTATUS:exitcode

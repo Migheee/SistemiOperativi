@@ -14,7 +14,7 @@ int main(){
             if(pid=fork()==0){
                 execlp(comm, comm, NULL);
                 perror("Comando Fallito");
-                _exit(0x15);
+                _exit(0x15); //Non svuota il buffer di stdio
             }
             else{
                 wait(&st);
